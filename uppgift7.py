@@ -6,9 +6,11 @@ car = {
     "Year" : 1985
 }
 
-# 2. Skriv ut car.
+# 2. Skriv ut all data i din bil med print(car['nyckel']).
 
-print(car)
+print(car["Name"])
+print(car["Model"])
+print(car["Year"])
 
 # 3. Går det att göra flera dictionaries i en lista? Försök att “nästla” dictionaries i en lista så du kan ha flera bilar
 
