@@ -1,4 +1,4 @@
-# 1. Deklarera ditt eget dictionary "car " med information om en bil 
+# 1.  Deklarera ditt eget dictionary "car " med information om en bil 
 
 car = {
     "Name" : "DeTomaso",
