@@ -14,20 +14,20 @@ print(car["Year"])
 
 # 3. Går det att göra flera dictionaries i en lista? Försök att “nästla” dictionaries i en lista så du kan ha flera bilar
 
-car2 = {
+
+
+cars = [car, {
     "Name" : "Volvo",
     "Model" : "S60",
     "Year" : 2025
-}
-
-cars = [car, car2]
+}]
 
 # 4. Skriv ut samtliga bilar på ett snyggt sätt
 
 for i in range(len(cars)):
     print(f"Name: {(cars[i])['Name']}")
     print(f"Model: {(cars[i])['Model']}")
-    print(f"Year: {(cars[i])['Year']}")
+    print(f"Year: {(cars[i])['Year']} \n")
 
 # 5. Gör så man kan lägga till bil
 
@@ -44,7 +44,13 @@ cars.append(car3)
 
 # 6. Gör så man kan ta bort bil
 
-removed_car = int(input("Write the number of the car you want to remove, (0-2): "))
+for i in range(len(cars)):
+    print(f"Car {i} \n")
+    print(f"Name: {(cars[i])['Name']}")
+    print(f"Model: {(cars[i])['Model']}")
+    print(f"Year: {(cars[i])['Year']} \n")
+
+removed_car = int(input(f"Write the number of the car you want to remove, (0-{i}): "))
 
 cars.pop(removed_car)
 
@@ -52,8 +58,13 @@ cars.pop(removed_car)
 # 7. Gör så man kan ändra bil
 
 while True:
+    for i in range(len(cars)):
+        print(f"Car {i} \n")
+        print(f"Name: {(cars[i])['Name']}")
+        print(f"Model: {(cars[i])['Model']}")
+        print(f"Year: {(cars[i])['Year']} \n")
     try:
-        car_edit = int(input("Choose a car you want to edit, (0-2)"))
+        car_edit = int(input(f"Choose a car you want to edit, (0-{i})"))
         print(f"Name: {(cars[car_edit])['Name']}")
         print(f"Model: {(cars[car_edit])['Model']}")
         print(f"Year: {(cars[car_edit])['Year']}")
